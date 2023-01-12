@@ -13,8 +13,8 @@ const io = new Server(server, {
 });
 io.on("connection", (socket) => {
   // console.log(`User Onnected:${socket.id}`);
-  socket.on("join_room", (data) => {
-    socket.join(data);
+  socket.on("join_room", (room) => {
+    socket.join(room);
   });
   socket.on("send_message", (data) => {
     // console.log(data);
